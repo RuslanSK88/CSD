@@ -1,6 +1,12 @@
-﻿namespace CSD.Web.Data
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace CSD.Web.Data;
+
+public class CSDContext : DbContext
 {
-    public class CSDContext
+    public CSDContext(DbContextOptions options) : base(options)
     {
+
     }
 }
+
