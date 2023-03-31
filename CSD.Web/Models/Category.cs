@@ -14,7 +14,7 @@ public class Category
     [Required]
     public string? Name { get; set; }
 
-    [Display(Name = "Родительския категория")]
+    [Display(Name = "Родительская категория")]
     [Required]
     public int ParentId { get; set; } = 0;
 
