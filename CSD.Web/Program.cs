@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using CSD.Web.Data;
+
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<CSDContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CSDContext")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
