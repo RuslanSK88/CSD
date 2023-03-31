@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CSD.Web.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CSD.Web.Data;
 
@@ -8,5 +9,6 @@ public class CSDContext : DbContext
     {
 
     }
+    public DbSet<Category> Categories { get; set; }
 }
 
