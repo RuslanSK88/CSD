@@ -7,13 +7,15 @@ public class Post
     [Key]
     public int Id { get; set; }
 
-    [Required]
     [Display(Name = "Заголовок")]
+    [Required(ErrorMessage = "Обязательное поле")]
+    [StringLength(100, MinimumLength = 3, ErrorMessage = "Длина должна быть от 3 до 100 символов")]
     public string? Title { get; set; }
 
     [DataType(DataType.MultilineText)]
     [Required]
     [Display(Name = "Текст статьи")]
+    [StringLength(250, MinimumLength = 3, ErrorMessage = "Длина должна быть от 3 до 250 символов")]
     public string? Text { get; set; }
 
     [Required]
